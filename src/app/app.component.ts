@@ -14,7 +14,7 @@ export class AppComponent {
   rowWasClicked(index: number) {
     if (typeof index === 'number') {
       this.currentIndex = index;
-      console.log("row: "+index);
+      console.log("row: "+this.currentIndex);
     }
   }
 }

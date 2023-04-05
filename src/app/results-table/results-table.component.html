@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let r of results;even as evenRow;index as indexRow" [attr.data-index]="indexRow" [ngClass]="evenRow?'even':'odd'" (click)="rowClick(indexRow)" [class.current]="indexRow === currentIndex">
+        <tr *ngFor="let r of results;even as evenRow;index as indexRow" [ngClass]="evenRow?'even':'odd'" (click)="rowClick(indexRow)" [class.current]="indexRow === currentIndex">
             <td>{{r.grandPrix}}</td>
             <td>{{r.date}}</td>
             <td>{{r.winner}}</td>
