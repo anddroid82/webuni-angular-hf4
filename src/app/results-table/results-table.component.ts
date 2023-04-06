@@ -15,3 +15,4 @@ export class ResultsTableComponent {
     this.currentIndexChange.emit(rowIndex===this.currentIndex?-1:rowIndex);
   }
 }
+//teszt
