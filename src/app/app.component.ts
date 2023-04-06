@@ -12,9 +12,10 @@ export class AppComponent {
   currentIndex:number = -1;
 
   rowWasClicked(index: number) {
-    if (typeof index === 'number') {
       this.currentIndex = index;
-      console.log("row: "+this.currentIndex);
-    }
+  }
+
+  podiumClosed(){
+    this.currentIndex = -1;
   }
 }

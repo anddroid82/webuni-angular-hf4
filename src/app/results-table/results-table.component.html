@@ -1,20 +1,27 @@
-<table id="resultsTable">
+<div id="resultsContainer">
+  <table id="resultsTable">
     <thead>
-        <tr>
-            <th>Futam</th>
-            <th>Dátum</th>
-            <th>Győztes</th>
-            <th>Csapat</th>
-            <th>Körök száma</th>
-        </tr>
+      <tr>
+        <th>Futam</th>
+        <th>Dátum</th>
+        <th>Győztes</th>
+        <th>Csapat</th>
+        <th>Körök száma</th>
+      </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let r of results;even as evenRow;index as indexRow" [ngClass]="evenRow?'even':'odd'" (click)="rowClick(indexRow)" [class.current]="indexRow === currentIndex">
-            <td>{{r.grandPrix}}</td>
-            <td>{{r.date}}</td>
-            <td>{{r.winner}}</td>
-            <td>{{r.team}}</td>
-            <td>{{r.laps}}</td>
-        </tr>
+      <tr
+        *ngFor="let r of results; even as evenRow; index as indexRow"
+        [ngClass]="evenRow ? 'even' : 'odd'"
+        (click)="rowClick(indexRow)"
+        [class.current]="indexRow === currentIndex"
+      >
+        <td>{{ r.grandPrix }}</td>
+        <td>{{ r.date | date : "medium" }}</td>
+        <td>{{ r.winner }}</td>
+        <td>{{ r.team | uppercase }}</td>
+        <td>{{ r.laps }}</td>
+      </tr>
     </tbody>
-</table>
+  </table>
+</div>

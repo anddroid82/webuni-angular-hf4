@@ -1,6 +1,10 @@
 #resultsTable {
-    width: 800px;
+    width: 1000px;
     margin: 10px auto;
+    font-size: 0.9em;
+}
+tr:hover {
+    cursor: pointer;
 }
 th {
     text-transform: uppercase;
@@ -14,7 +18,8 @@ th {
 }
 td {
     color: #707070;
+    padding: 5px;
 }
-.current {
+.current td {
     color: black;
 }

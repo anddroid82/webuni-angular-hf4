@@ -1,1 +1,6 @@
-<p>podium works!</p>
+<div id="podium">
+  <ol>
+    <li *ngFor="let d of drivers">{{ d }}</li>
+  </ol>
+  <button (click)="closeClick()">Elrejt</button>
+</div>
