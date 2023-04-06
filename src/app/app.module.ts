@@ -18,4 +18,3 @@ import { PodiumComponent } from './podium/podium.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
