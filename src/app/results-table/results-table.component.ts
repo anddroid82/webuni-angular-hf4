@@ -8,10 +8,10 @@ import { Result } from 'src/results';
 })
 export class ResultsTableComponent {
   @Input() results:Result[]=[];
-  @Output() rowSelect:EventEmitter<number> = new EventEmitter<number>();
+  @Output() currentIndexChange:EventEmitter<number> = new EventEmitter<number>();
   @Input() currentIndex:number = -1;
 
   rowClick(rowIndex:number){
-    this.rowSelect.emit(rowIndex===this.currentIndex?-1:rowIndex);
+    this.currentIndexChange.emit(rowIndex===this.currentIndex?-1:rowIndex);
   }
 }

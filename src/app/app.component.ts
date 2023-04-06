@@ -10,11 +10,7 @@ export class AppComponent {
   title = 'webuni-angular-hf4';
   results = ressults;
   currentIndex:number = -1;
-
-  rowWasClicked(index: number) {
-      this.currentIndex = index;
-  }
-
+  
   podiumClosed(){
     this.currentIndex = -1;
   }
